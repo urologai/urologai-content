@@ -20,6 +20,7 @@
 - ADR-WORK-001: initial background work uses claimed Codex/Claude Code batches and immutable build/Render receipts; only gated sanitized projections enter this repository.
 - PLAN-001: interactive corpus generation uses user-selected allowance envelopes, one independently committable batch at a time, and a `paused_budget` safe stop.
 - ADR-WORK-002: agents may not spend below the reserve floor, automatically buy credits, redeem resets, or switch to API billing.
+- ADR-WORK-003: Dr. Donald Neff (`nocluetoday`) is an authorized build collaborator with repository-scoped write access after invitation acceptance; this is not organization administration or production authority.
 - Historical plan references to `urowiki-content` resolve to this repository.
 
 ## Block ledger
@@ -28,6 +29,7 @@
 |---|---|---|---|---|
 | `B01` | bootstrap complete | Establish the repository with one governance-only initial commit | Root B01 handoff manifest pins this commit | A later named content block after its dependencies |
 | `PLAN-001` | complete | Add credit-budgeted, resumable corpus batches without changing frozen plan v1.1 | `docs/build-history/20260919T194616Z-PLAN-001-codex.json` pins implementation `f621d491223ad358dbcd0e50600b89c6eaa43977` | A later named content block after its dependencies |
+| `GOV-001` | complete | Add the explicit independent-builder runbook and authorize Dr. Neff's bounded collaborator role | `docs/build-history/20260919T201140Z-GOV-001-codex.json` pins implementation `19f72cbc63ee453ec437f997387f25af2fd6cc69` | A later named content block after its dependencies |
 
 The immutable initial commit SHA, numeric GitHub repository ID, node ID, and remote settings are recorded outside this self-referential commit in the B01 root handoff manifest.
 
@@ -37,4 +39,5 @@ The immutable initial commit SHA, numeric GitHub repository ID, node ID, and rem
 - License: intentionally unresolved; no license file is present.
 - Clinical content, seed drafts, source copies, private data, implementation code, workflows, secrets, donor source, DNS changes, and deployments: absent.
 - Render target: not configured for this repository; material builds must still write a receipt recording `not_configured` until that changes.
+- Live GitHub permissions determine whether Dr. Neff's repository invitation is pending or accepted. No organization-owner, repository-admin, deployment, environment, secret, billing, DNS, or release authority is granted by GOV-001.
 - The legacy `jfantus/urowiki` prototype and `nocluetoday/OR_Prep` are outside this repository and remain unmodified.
